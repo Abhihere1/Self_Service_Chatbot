@@ -115,3 +115,32 @@ export function getPopularQuestions(limit = 5): KBEntry[] {
 export function getAllEntries(): KBEntry[] {
   return allEntries;
 }
+
+export function searchPrioritized(query: string, category: string): SearchResult | null {
+  if (!query.trim()) return null;
+
+  const categoryEntries = getEntriesByCategory(category);
+  if (categoryEntries.length > 0) {
+    const categoryFuse = new Fuse(categoryEntries, {
+      includeScore: true,
+      threshold: 0.4,
+      keys: ["question", "keywords", "tags"],
+    });
+
+    const categoryResults = categoryFuse.search(query);
+    if (categoryResults.length > 0) {
+      const best = categoryResults[0];
+      const confidence = normalizeScore(best.score ?? 1);
+      if (confidence >= 0.5) {
+        return {
+          item: best.item,
+          score: confidence,
+          confidence: "high",
+          matchType: determineMatchType(query, best.item),
+        };
+      }
+    }
+  }
+
+  return search(query);
+}

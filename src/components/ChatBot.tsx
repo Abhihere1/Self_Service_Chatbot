@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import {
   search,
+  searchPrioritized,
   getRelatedQuestions,
   getEntriesByCategory,
   getPopularQuestions,
@@ -19,6 +20,20 @@ interface Message {
 }
 
 const CATEGORIES = ["VDI", "Phone", "Scanner", "General IT"];
+
+const CATEGORY_GREETINGS: Record<string, string> = {
+  VDI: "How can I help you with VDI today? I can assist with connection issues, performance, black screens, and more.",
+  Phone: "How can I help you with Phone Support today? I can assist with voicemail, call forwarding, audio quality, and softphone setup.",
+  Scanner: "How can I help you with Scanner issues today? I can assist with connectivity, driver setup, and document scanning problems.",
+  "General IT": "How can I help you with General IT today? I can assist with passwords, software installation, hardware issues, and more.",
+};
+
+function getInitialMessages(category?: string): Message[] {
+  const content = category && CATEGORY_GREETINGS[category]
+    ? CATEGORY_GREETINGS[category]
+    : "Hello! I'm your IT Support Assistant. I can help you with VDI, Phone, Scanner, and General IT questions. How can I help you today?";
+  return [{ id: "welcome", role: "bot", content, timestamp: new Date() }];
+}
 
 const SUGGESTED_PROMPTS = [
   "How do I connect to VDI?",
@@ -40,19 +55,19 @@ function escapeHtml(text: string): string {
     .replace(/'/g, "&#x27;");
 }
 
-export default function ChatBot() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome",
-      role: "bot",
-      content:
-        "Hello! I'm your IT Support Assistant. I can help you with VDI, Phone, Scanner, and General IT questions. How can I help you today?",
-      timestamp: new Date(),
-    },
-  ]);
+interface ChatBotProps {
+  initialCategory?: string;
+}
+
+export default function ChatBot({ initialCategory }: ChatBotProps) {
+  const [messages, setMessages] = useState<Message[]>(() =>
+    getInitialMessages(initialCategory)
+  );
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(
+    initialCategory ?? null
+  );
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [globalSearchValue, setGlobalSearchValue] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -91,7 +106,9 @@ export default function ChatBot() {
       // Simulate async search delay
       await new Promise((r) => setTimeout(r, 600));
 
-      const result = search(trimmed);
+      const result = activeCategory
+        ? searchPrioritized(trimmed, activeCategory)
+        : search(trimmed);
       let botMsg: Message;
 
       if (!result || result.confidence === "low") {
@@ -116,7 +133,7 @@ export default function ChatBot() {
       setIsTyping(false);
       setMessages((prev) => [...prev, botMsg]);
     },
-    []
+    [activeCategory]
   );
 
   const handleCategoryClick = (category: string) => {
