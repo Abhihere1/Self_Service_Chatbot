@@ -1,0 +1,56 @@
+[
+  {
+    "id": "PHN001",
+    "category": "Phone",
+    "question": "How do I set up voicemail on my office phone?",
+    "keywords": ["voicemail", "setup", "phone", "message", "mailbox", "greeting"],
+    "answer": "To set up voicemail: 1) Press the 'Messages' button or dial *98 from your desk phone. 2) Follow the prompts to set your PIN (minimum 6 digits). 3) Record your personal greeting when prompted. 4) To access voicemail remotely, dial the main office number and press * when the auto-attendant answers, then enter your extension and PIN.",
+    "tags": ["voicemail", "setup", "phone-system"],
+    "priority": 1
+  },
+  {
+    "id": "PHN002",
+    "category": "Phone",
+    "question": "No dial tone on office phone",
+    "keywords": ["no dial tone", "dead", "silent", "phone", "not working", "line"],
+    "answer": "If there is no dial tone: 1) Check that the handset cord is firmly plugged into the base and handset. 2) Check the network cable at the back of the phone is secure. 3) Unplug the phone power and network cable, wait 30 seconds, and reconnect. 4) Try a different network port if available. 5) If none of these work, contact IT Helpdesk for a line or equipment check.",
+    "tags": ["troubleshooting", "dial-tone", "hardware"],
+    "priority": 1
+  },
+  {
+    "id": "PHN003",
+    "category": "Phone",
+    "question": "How do I forward calls to my mobile phone?",
+    "keywords": ["forward", "call forwarding", "mobile", "redirect", "divert", "transfer"],
+    "answer": "To forward calls to your mobile: 1) From your desk phone, dial *72 followed by your mobile number. 2) To cancel forwarding, dial *73. 3) Alternatively, access the phone system web portal (ask IT for the URL) and configure forwarding rules under your profile settings. 4) Note: call forwarding to external numbers may need IT authorization depending on company policy.",
+    "tags": ["call-forwarding", "mobile", "settings"],
+    "priority": 2
+  },
+  {
+    "id": "PHN004",
+    "category": "Phone",
+    "question": "Echo or poor audio quality on phone calls",
+    "keywords": ["echo", "audio quality", "noise", "static", "feedback", "bad sound"],
+    "answer": "For echo or poor audio quality: 1) Ensure you are not using a speakerphone in a room with hard surfaces that cause echo. 2) Check headset connections if using a headset. 3) Move away from electronic devices that may cause interference. 4) Ask the other party if they hear the echo too — the issue may be on their end. 5) Report persistent audio quality issues to IT for a line quality check.",
+    "tags": ["audio", "quality", "troubleshooting"],
+    "priority": 3
+  },
+  {
+    "id": "PHN005",
+    "category": "Phone",
+    "question": "How to transfer a call to another extension",
+    "keywords": ["transfer", "call", "extension", "forward call", "connect", "warm transfer", "blind transfer"],
+    "answer": "To transfer a call: 1) During an active call, press the 'Transfer' button on your phone. 2) For a blind transfer (no announcement): Dial the extension number, then press 'Transfer' again. 3) For a warm/consultative transfer: Dial the extension, wait for the person to answer, announce the call, then press 'Transfer'. 4) To cancel a transfer in progress, press 'Cancel' or the 'Transfer' button again.",
+    "tags": ["call-transfer", "extension", "phone-system"],
+    "priority": 2
+  },
+  {
+    "id": "PHN006",
+    "category": "Phone",
+    "question": "Softphone app not connecting",
+    "keywords": ["softphone", "app", "not connecting", "offline", "registration failed", "Jabber", "Teams phone"],
+    "answer": "If your softphone is not connecting: 1) Verify you are connected to the corporate network or VPN. 2) Close and reopen the softphone application. 3) Check that your credentials are correctly entered in the app settings. 4) Ensure the app is not blocked by your firewall or antivirus. 5) Reinstall the app if the problem persists. Contact IT if you continue to see 'Registration Failed' errors.",
+    "tags": ["softphone", "connectivity", "troubleshooting"],
+    "priority": 2
+  }
+]

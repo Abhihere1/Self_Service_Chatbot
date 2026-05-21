@@ -1,0 +1,56 @@
+[
+  {
+    "id": "SCN001",
+    "category": "Scanner",
+    "question": "Scanner not detected by computer",
+    "keywords": ["scanner", "not detected", "not recognized", "USB", "driver", "connect"],
+    "answer": "If the scanner is not detected: 1) Check USB/network cable connections and try a different USB port. 2) Restart both the scanner and the computer. 3) Open Device Manager and look for any unknown devices with errors. 4) Download and reinstall the latest scanner driver from the manufacturer website or IT shared drive. 5) If using a network scanner, ensure it has the correct IP address in your scanning software settings.",
+    "tags": ["detection", "driver", "hardware", "USB"],
+    "priority": 1
+  },
+  {
+    "id": "SCN002",
+    "category": "Scanner",
+    "question": "Scanned documents are blurry or low quality",
+    "keywords": ["blurry", "low quality", "resolution", "DPI", "scan quality", "fuzzy", "unclear"],
+    "answer": "To improve scan quality: 1) Clean the scanner glass with a lint-free cloth and glass cleaner. 2) Increase the scanning resolution in the scanner settings (300 DPI for documents, 600+ DPI for images). 3) Ensure the document is flat on the scanner glass without wrinkles. 4) Check the output format — PDF with OCR or high-quality JPEG/TIFF will produce better results. 5) Check scanner driver settings for any quality or compression options.",
+    "tags": ["quality", "resolution", "maintenance"],
+    "priority": 2
+  },
+  {
+    "id": "SCN003",
+    "category": "Scanner",
+    "question": "Scanner paper jam",
+    "keywords": ["paper jam", "jammed", "stuck paper", "ADF", "feeder", "jam"],
+    "answer": "To clear a paper jam: 1) Turn off the scanner immediately. 2) Open the document feeder (ADF) cover slowly. 3) Gently remove any jammed paper — pull in the direction of paper travel, never backwards. 4) Check for any torn pieces of paper remaining. 5) Close all covers and turn the scanner back on. 6) Run a test scan with a clean sheet. If jams persist, check paper quality and ensure you are not overfilling the ADF tray.",
+    "tags": ["paper-jam", "ADF", "maintenance", "hardware"],
+    "priority": 1
+  },
+  {
+    "id": "SCN004",
+    "category": "Scanner",
+    "question": "How to scan to email",
+    "keywords": ["scan to email", "email scan", "send scan", "email document", "scan and send"],
+    "answer": "To scan directly to email: 1) Ensure your scanner is configured with the email server settings (contact IT to set this up initially). 2) Place your document in the ADF or on the scanner glass. 3) On the scanner control panel, select 'Scan to Email' or 'Send to Email'. 4) Enter or select the recipient email address from the address book. 5) Select quality settings and press 'Send/Start'. 6) You should receive a confirmation on the panel when sent.",
+    "tags": ["email", "scan-to-email", "workflow"],
+    "priority": 2
+  },
+  {
+    "id": "SCN005",
+    "category": "Scanner",
+    "question": "Scanner shows offline status in Windows",
+    "keywords": ["offline", "status", "Windows", "scanner offline", "not available", "disconnected"],
+    "answer": "To bring the scanner back online in Windows: 1) Go to Control Panel > Devices and Printers. 2) Right-click your scanner and select 'See what's printing'. 3) In the menu, click 'Printer' and uncheck 'Use Printer Offline'. 4) Restart the Print Spooler service: open Services (services.msc), find 'Print Spooler', right-click and select Restart. 5) If using a network scanner, verify the scanner's IP address hasn't changed.",
+    "tags": ["offline", "Windows", "status", "troubleshooting"],
+    "priority": 2
+  },
+  {
+    "id": "SCN006",
+    "category": "Scanner",
+    "question": "How to set up scan to shared folder",
+    "keywords": ["scan to folder", "shared folder", "network folder", "SMB", "scan destination", "file share"],
+    "answer": "To configure scan to shared folder: 1) Ensure the shared folder exists on the network with proper permissions for the scanner's service account. 2) On the scanner control panel, go to 'Scan to Folder' settings or use the scanner's web admin interface. 3) Add a new destination with: folder path (\\\\server\\share\\folder), username, and password. 4) Test the connection from the scanner. 5) Contact IT if you need help setting up the service account or folder permissions.",
+    "tags": ["shared-folder", "network", "setup", "configuration"],
+    "priority": 3
+  }
+]

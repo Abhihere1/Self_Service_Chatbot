@@ -1,0 +1,56 @@
+[
+  {
+    "id": "VDI001",
+    "category": "VDI",
+    "question": "How do I connect to the VDI environment?",
+    "keywords": ["connect", "login", "VDI", "virtual desktop", "remote desktop", "access"],
+    "answer": "To connect to the VDI environment: 1) Download and install Citrix Workspace or VMware Horizon client. 2) Open the client and enter the VDI server address provided by IT. 3) Log in with your corporate credentials (domain\\username and password). 4) Select your assigned virtual desktop from the list. If you encounter issues, ensure your VPN is connected first.",
+    "tags": ["connection", "login", "setup", "remote-access"],
+    "priority": 1
+  },
+  {
+    "id": "VDI002",
+    "category": "VDI",
+    "question": "VDI session is slow or lagging",
+    "keywords": ["slow", "lag", "performance", "VDI", "latency", "freeze", "buffering"],
+    "answer": "To improve VDI performance: 1) Check your local internet connection speed (minimum 10 Mbps recommended). 2) Close unnecessary applications in the VDI session. 3) Disconnect and reconnect to the VDI session. 4) If using WiFi, try switching to a wired ethernet connection. 5) Contact IT if the issue persists — they may need to reallocate VDI resources.",
+    "tags": ["performance", "troubleshooting", "network"],
+    "priority": 2
+  },
+  {
+    "id": "VDI003",
+    "category": "VDI",
+    "question": "VDI black screen on startup",
+    "keywords": ["black screen", "blank screen", "VDI", "startup", "loading", "boot"],
+    "answer": "For a VDI black screen issue: 1) Wait 2-3 minutes as the desktop may still be loading. 2) Press Ctrl+Alt+Del to bring up the action screen. 3) Try disconnecting and reconnecting the session. 4) Clear your Citrix/VMware client cache and retry. 5) If the issue persists, log a ticket with IT Support including your VDI username and session time.",
+    "tags": ["black-screen", "startup", "troubleshooting"],
+    "priority": 2
+  },
+  {
+    "id": "VDI004",
+    "category": "VDI",
+    "question": "Cannot copy paste between local machine and VDI",
+    "keywords": ["copy paste", "clipboard", "VDI", "local machine", "transfer", "copy"],
+    "answer": "To enable clipboard between local machine and VDI: 1) In Citrix: Go to Citrix Workspace settings > Preferences > Devices and enable 'Clipboard'. 2) In VMware Horizon: Ensure clipboard redirection is enabled in the View Client settings. 3) Restart your VDI session after making changes. 4) If still not working, contact IT to verify clipboard policy settings are enabled for your user profile.",
+    "tags": ["clipboard", "copy-paste", "settings"],
+    "priority": 3
+  },
+  {
+    "id": "VDI005",
+    "category": "VDI",
+    "question": "VDI session disconnects frequently",
+    "keywords": ["disconnect", "drops", "timeout", "VDI", "session", "reconnect", "unstable"],
+    "answer": "For frequent VDI disconnections: 1) Check network stability — run a ping test to verify no packet loss. 2) Adjust session timeout settings in your VDI client preferences. 3) Ensure your VPN client is up to date. 4) Disable power-saving settings that may put your network adapter to sleep. 5) Contact IT if the problem continues — they can check server-side session logs.",
+    "tags": ["disconnection", "session", "network", "timeout"],
+    "priority": 2
+  },
+  {
+    "id": "VDI006",
+    "category": "VDI",
+    "question": "How to reset VDI password",
+    "keywords": ["reset", "password", "VDI", "forgot password", "credentials", "change password"],
+    "answer": "To reset your VDI password: 1) On your local machine, press Ctrl+Alt+Del and select 'Change a password'. 2) Alternatively, visit the self-service password portal at password.company.com. 3) If locked out, contact IT Helpdesk at helpdesk@company.com or Extension 1234 for an immediate reset. 4) New password must meet complexity requirements: minimum 8 characters, uppercase, lowercase, number, and special character.",
+    "tags": ["password", "security", "account"],
+    "priority": 1
+  }
+]
