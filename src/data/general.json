@@ -1,0 +1,74 @@
+[
+  {
+    "id": "GEN001",
+    "category": "General IT",
+    "question": "How do I connect to the company WiFi?",
+    "keywords": ["WiFi", "wireless", "connect", "network", "internet", "SSID"],
+    "answer": "To connect to company WiFi: 1) On your device, open WiFi settings and look for the corporate SSID (ask IT for the network name). 2) Select the network and enter your corporate credentials (domain\\username and password) when prompted. 3) Accept any security certificates if requested. 4) For guest WiFi, request a temporary access code from the receptionist or IT. 5) Contact IT if you cannot see the network or authentication fails.",
+    "tags": ["wifi", "network", "connectivity", "setup"],
+    "priority": 1
+  },
+  {
+    "id": "GEN002",
+    "category": "General IT",
+    "question": "Computer is running very slow",
+    "keywords": ["slow", "performance", "computer", "laptop", "PC", "laggy", "freezing", "hanging"],
+    "answer": "To improve computer performance: 1) Restart your computer — this clears memory and applies pending updates. 2) Check Task Manager (Ctrl+Shift+Esc) for high CPU or memory usage processes. 3) Free up disk space: delete temp files (Win+R, type %temp%), and empty the Recycle Bin. 4) Run a malware scan using the corporate antivirus software. 5) Ensure Windows updates are current. 6) If still slow, contact IT — your device may need hardware upgrade or imaging.",
+    "tags": ["performance", "slow", "troubleshooting", "maintenance"],
+    "priority": 1
+  },
+  {
+    "id": "GEN003",
+    "category": "General IT",
+    "question": "Cannot access company intranet or internal websites",
+    "keywords": ["intranet", "internal website", "cannot access", "blocked", "404", "unreachable"],
+    "answer": "If you cannot access internal websites: 1) Verify you are connected to the corporate network or VPN. 2) Try accessing via IP address instead of hostname to diagnose DNS issues. 3) Clear your browser cache and cookies. 4) Try a different browser. 5) Check if others can access the same site — it may be a server issue. 6) Contact IT if the site should be accessible but is consistently blocked or unreachable.",
+    "tags": ["intranet", "access", "network", "browser"],
+    "priority": 2
+  },
+  {
+    "id": "GEN004",
+    "category": "General IT",
+    "question": "How do I request new software installation?",
+    "keywords": ["software", "install", "request", "application", "program", "tool", "license"],
+    "answer": "To request software installation: 1) Submit a software request ticket via the IT Service Portal. 2) Include the software name, version, business justification, and whether a license is needed. 3) Manager approval may be required for licensed software. 4) Standard approved software (see IT portal catalog) can be self-installed via the Software Center app. 5) Custom or third-party requests may take 3-5 business days for review and deployment.",
+    "tags": ["software", "installation", "request", "IT-portal"],
+    "priority": 2
+  },
+  {
+    "id": "GEN005",
+    "category": "General IT",
+    "question": "Email not syncing or not receiving emails",
+    "keywords": ["email", "sync", "not receiving", "Outlook", "mail", "missing emails", "inbox"],
+    "answer": "If email is not syncing: 1) Check your internet/network connection. 2) In Outlook, click 'Send/Receive All Folders' (F9). 3) Check if you are in Offline Mode: File > look for 'Work Offline' and ensure it is unchecked. 4) Verify your mailbox is not over quota (File > Info > Mailbox Settings). 5) Restart Outlook. 6) If using a mobile device, remove and re-add the email account. Contact IT if you believe there is a server-side issue.",
+    "tags": ["email", "Outlook", "sync", "troubleshooting"],
+    "priority": 1
+  },
+  {
+    "id": "GEN006",
+    "category": "General IT",
+    "question": "Printer not working or not found",
+    "keywords": ["printer", "not working", "not found", "print", "offline", "driver", "printing"],
+    "answer": "If your printer is not working: 1) Ensure the printer is powered on and has paper and ink/toner. 2) Check that the printer is connected to the network or USB. 3) On your computer, go to Settings > Printers and check the printer status. 4) Run the printer troubleshooter: Settings > Update & Security > Troubleshoot. 5) Delete the print queue and retry. 6) Reinstall the printer driver from the IT shared drive. Contact IT if the printer remains offline.",
+    "tags": ["printer", "troubleshooting", "driver", "hardware"],
+    "priority": 2
+  },
+  {
+    "id": "GEN007",
+    "category": "General IT",
+    "question": "How to connect to VPN",
+    "keywords": ["VPN", "connect", "remote", "work from home", "secure connection", "tunnel"],
+    "answer": "To connect to the company VPN: 1) Install the VPN client if not already installed (contact IT for the installer). 2) Open the VPN client and enter the VPN server address provided by IT. 3) Log in with your corporate credentials (username and password). 4) Select the appropriate VPN profile (Full Tunnel for all traffic, Split Tunnel for corporate only). 5) Look for the connected indicator in your system tray. Disconnect when done to free up VPN capacity.",
+    "tags": ["VPN", "remote-access", "connectivity", "setup"],
+    "priority": 1
+  },
+  {
+    "id": "GEN008",
+    "category": "General IT",
+    "question": "How to reset my Windows login password",
+    "keywords": ["reset password", "Windows", "login", "forgot password", "account locked", "credentials"],
+    "answer": "To reset your Windows password: 1) Visit the self-service password reset portal at password.company.com from any browser. 2) Enter your username and answer the security questions or use MFA to verify identity. 3) Set a new password meeting the complexity policy. 4) If your account is locked, contact IT Helpdesk at helpdesk@company.com or call Extension 1234 for immediate assistance. 5) After reset, sign out and back into all services using the new password.",
+    "tags": ["password", "Windows", "account", "security"],
+    "priority": 1
+  }
+]
